@@ -52,6 +52,11 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+			<id>oracle</id>
+			<name>ORACLE JDBC Repository</name>
+			<url>http://maven.jahia.org/maven2</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -114,7 +119,7 @@
 			<version>2.3.2</version>
 		</dependency>
         
-        <!-- mysql이나 oracle DB 사용시 아래 설정 추가  
+        <!-- mysql이나 oracle DB 사용시 아래 설정 추가  -->
         <dependency>
             <groupId>com.googlecode.log4jdbc</groupId>
             <artifactId>log4jdbc</artifactId>
@@ -139,14 +144,12 @@
             <version>5.1.31</version>
         </dependency>
 
-        <dependency>
-            <groupId>ojdbc</groupId>
-            <artifactId>ojdbc</artifactId>
-            <version>14</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/ojdbc-14.jar</systemPath>
-        </dependency>
-        -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0.2</version>
+		</dependency>
+        
 	</dependencies>
 
 	<build>
