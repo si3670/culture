@@ -61,6 +61,7 @@
 
 	<dependencies>
 		<!-- 표준프레임워크 실행환경 -->
+		
         <dependency>
 		    <groupId>egovframework.rte</groupId>
 		    <artifactId>egovframework.rte.ptl.mvc</artifactId>
@@ -118,8 +119,10 @@
 			<artifactId>hsqldb</artifactId>
 			<version>2.3.2</version>
 		</dependency>
+		
         
         <!-- mysql이나 oracle DB 사용시 아래 설정 추가  -->
+        
         <dependency>
             <groupId>com.googlecode.log4jdbc</groupId>
             <artifactId>log4jdbc</artifactId>
@@ -160,7 +163,7 @@
             <plugins>
                 <plugin>
 	                <groupId>org.apache.tomcat.maven</groupId>
-	                <artifactId>tomcat7-maven-plugin</artifactId>
+	                <artifactId>tomcat8-maven-plugin</artifactId>
 	                <version>2.2</version>
 	                <configuration>
 	                    <port>80</port>
@@ -206,6 +209,10 @@
                     <version>1.0-alpha-3</version>
                 </plugin>
                 <!-- PMD manven plugin -->
+                <plugin>
+			      <artifactId>maven-war-plugin</artifactId>
+			      <version>3.2.2</version>
+			    </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-pmd-plugin</artifactId>

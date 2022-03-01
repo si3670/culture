@@ -9,7 +9,7 @@
 <!--프로젝트 주소(명)-->
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <!--css-->
-<link type="text/css" rel="stylesheet" href="/culture/css/egovframework/common.css" />
+<link type="text/css" rel="stylesheet" href="${contextPath}/css/egovframework/common.css" />
 </head>
 
 <body>
