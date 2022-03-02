@@ -27,5 +27,5 @@ public class MainContoller {
 	public String showMain() throws Exception{
 		return "main/main";
 	}
-
+	
 }
