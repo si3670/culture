@@ -1,5 +1,6 @@
 package kr.culture;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author rlarn
  *
  */
+@Controller
 public class memeberController {
 	
 	/**
@@ -15,12 +17,12 @@ public class memeberController {
 	 *  @author kimgukbin
 	 *  @since 2022. 3. 1 오후 18:22:50
 	 *  
-	 *  @return 회원가입 완료 or 실패 페이지로 연결
+	 *  @return 회원가입 완료
 	 *  @throws Exception
 	 */
 	@RequestMapping(value="/signUp.do")
 		public String signUp() throws Exception{
-			return "";
+			return "member/signUp";
 		}
 	/**
 	 *  로그인 화면 이동
@@ -33,6 +35,6 @@ public class memeberController {
 	 */
 	@RequestMapping(value="/login.do")
 	public String logIn() throws Exception{
-		return "main.do";
+		return "member/login";
 	}
 }
