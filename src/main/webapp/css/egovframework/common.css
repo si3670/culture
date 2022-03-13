@@ -6,6 +6,7 @@
     font-style: normal;
 }
 body{
+	background-color : #999; /*임시*/
     font-family: 'GmarketSansMedium';
 }
 
@@ -22,70 +23,48 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
-a:hover{
-	cursor: pointer;
-}
 .flex{
 	display: flex;
-}
-.img-box>img{
-	display: block;
-	width: 100%;
 }
 /*css 기초 작업 끝*/
 .con {
 	margin: 0 auto;
-	max-width: 1450px;
+	max-width: 1800px;
+	background-color: red; /*임시*/
 }
 /*메인화면 시작*/
-/*nav 시작*/
-.header{
-	position: relative;
-}
 ul>li {
 	display: inline-block;
 }
-.logo{
-	width: 60px;
-	height: 70px;
-	display: flex; 
-	align-items: center;
-	margin: 10px 0;
+.header{
+	position: relative;
 }
-.nav{
-	justify-content: space-between;
-	align-items: center;
-	text-align: center;
-}
-
 .nav-ul>li>a {
+	background-color: blue;
 	display: inline-block;
 	padding: 0 25px;
 	font-size: 20px;
 	color: white;
 }
-.nav-ul>li>a:hover{
-	color: #00A0A0;
-}
-.nav-a{
-	font-size: 24px;
-	margin-left:10px;
-	align-items: center;
-	display: flex;
-	color: white;
-}
-.right-box{
-	color: white;
-}
-/*nav 끝*/
-/*visual 시작*/
 .visual{
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: -1;
 	width: 100%;
-	
 }
-/*visual 끝*/
+.nav{
+	justify-content: space-between;
+	text-align: center;
+}
+
+.logo{
+	width: 70px;
+	height: 80px;
+	display: inline-block;
+}
+.logo>img{
+	display: block;
+	width: 100%;
+}
 /*메인화면 끝*/
