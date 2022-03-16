@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller
+@RequestMapping("/member")
 public class MemeberController {
 	/**
 	 *  회원가입 화면
