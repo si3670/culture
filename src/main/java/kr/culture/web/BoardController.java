@@ -1,9 +1,10 @@
-package kr.culture;
+package kr.culture.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/board")
 public class BoardController {
 	
 	
@@ -18,7 +19,7 @@ public class BoardController {
 	 */
 	@RequestMapping(value="/boardList.do")
 	public String boardList() throws Exception{
-		return "member/boardList";
+		return "board/boardList";
 	}
 	
 	/**
@@ -32,7 +33,7 @@ public class BoardController {
 	 */
 	@RequestMapping(value="/freeBoardList.do")
 	public String freeBoardList() throws Exception{
-		return "member/freeBoardList";
+		return "board/freeBoardList";
 	}
 	
 	/**
@@ -46,7 +47,7 @@ public class BoardController {
 	 */
 	@RequestMapping(value="/boardCreat.do")
 	public String boardCreat() throws Exception{
-		return "member/boardCreat";
+		return "board/boardCreat";
 	}
 	
 	/**
@@ -60,7 +61,7 @@ public class BoardController {
 	 */
 	@RequestMapping(value="/boardModify.do")
 	public String boardModify() throws Exception{
-		return "member/boardModify";
+		return "board/boardModify";
 	}
 	
 	/**
@@ -74,7 +75,7 @@ public class BoardController {
 	 */
 	@RequestMapping(value="/boardManagement.do")
 	public String boardManagement() throws Exception{
-		return "member/boardManagement";
+		return "board/boardManagement";
 	}
 	
 	/**
@@ -88,7 +89,7 @@ public class BoardController {
 	 */
 	@RequestMapping(value="/boardDetail.do")
 	public String boardDetail() throws Exception{
-		return "member/boardDetail";
+		return "board/boardDetail";
 	}
 	
 }

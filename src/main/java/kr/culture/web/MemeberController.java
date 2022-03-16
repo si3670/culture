@@ -1,4 +1,4 @@
-package kr.culture;
+package kr.culture.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/member")
 public class MemeberController {
-	
 	/**
 	 *  회원가입 화면
 	 *  

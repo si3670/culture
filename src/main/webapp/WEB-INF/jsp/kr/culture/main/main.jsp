@@ -56,17 +56,15 @@
  
  <div class="visual">
  	<div class="img-box visual-box">
- 		<img alt="" src="${contextPath}/images/visual/visual1-1.jpg">
+ 		<img alt="" src="${contextPath}/images/visual/visual-1.jpg">
  	</div>
  	
  	<div class="con">
  		<div style="padding: 50px 0;">
  			<h2>여행도우미</h2>
  		</div>
+
  	</div>
- 	
- 	
- 	
  </div>
 
 </body>
