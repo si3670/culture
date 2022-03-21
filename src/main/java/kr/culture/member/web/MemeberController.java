@@ -1,4 +1,4 @@
-package kr.culture.web;
+package kr.culture.member.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

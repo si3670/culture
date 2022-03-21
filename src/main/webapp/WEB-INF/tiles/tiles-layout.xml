@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions
+	PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tils.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="layouts-tiles" template="/WEB-INF/tiles/tiles-layouts.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/tiles-header.jsp" />
+		<put-attribute name="content" value="" /> <!--모든 페이지 content가 반복되지 않고 변하기 때문에 빈 값 설정-->
+		<put-attribute name="footer" value="/WEB-INF/tiles/tiles-footer.jsp" />
+	</definition>
+	
+	<definition name="*/*.tiles" extends="layouts-tiles">
+		<put-attribute name="content" value="/WEB-INF/jsp/kr/culture/{1}/{2}.jsp" /> <!--동적 주소-->
+	</definition>
+
+</tiles-definitions>

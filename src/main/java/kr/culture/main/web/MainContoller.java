@@ -1,4 +1,4 @@
-package kr.culture.web;
+package kr.culture.main.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +25,7 @@ public class MainContoller {
 	 */
 	@RequestMapping(value="/main.do")
 	public String showMain() throws Exception{
-		return "main/main";
+		return "main/main.tiles";
 	}
 	
 }
