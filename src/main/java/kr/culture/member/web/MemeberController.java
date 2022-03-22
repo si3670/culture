@@ -22,7 +22,7 @@ public class MemeberController {
 	 */
 	@RequestMapping(value="/signUp.do")
 		public String signUp() throws Exception{
-			return "member/signUp";
+			return "member/signUp.tiles";
 		}
 	/**
 	 *  로그인 화면 이동
@@ -35,7 +35,7 @@ public class MemeberController {
 	 */
 	@RequestMapping(value="/login.do")
 	public String logIn() throws Exception{
-		return "member/login";
+		return "member/login.tiles";
 	}
 	
 	/**

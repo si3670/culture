@@ -28,6 +28,9 @@ a:hover{
 .flex{
 	display: flex;
 }
+.center {
+	text-align: center;
+}
 .img-box>img{
 	display: block;
 	width: 100%;
@@ -93,5 +96,38 @@ ul>li {
 	width: 100%;
 	
 }
+.visual-1{
+	position: relative;
+}
+.visual-title{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
 /*visual 끝*/
 /*메인화면 끝*/
+/*회원가입 시작*/
+
+.btn {
+	display: inline-block;
+	width: 80px;
+	text-align: center;
+	background-color: green;
+	color: #fff;
+}
+.signUpForm-1{
+	display: inline-block;
+	padding: 50px;
+}
+.signUp-ul>li{
+	display: block;
+}
+.signUp-ul{
+	text-align: left;
+}
+.form-title{
+	text-align: center;
+	font-size: 40px;
+}
+/*회원가입 끝*/

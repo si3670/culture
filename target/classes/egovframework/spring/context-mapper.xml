@@ -20,7 +20,7 @@
 
 	<!-- MapperScannerConfigurer 를 사용하므로 따로 DAO 등록할 필요없음 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="kr.culture" />
+		<property name="basePackage" value="kr.culture.member.web" />
 		<property name="annotationClass"
 			value="org.springframework.stereotype.Repository" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
