@@ -46,6 +46,8 @@
  	<div class="right-box">
  		<i class="fa-solid fa-user"></i>
  		<a onclick="location.href='${contextPath}/member/login.do'">로그인</a>
+ 		<i class="fa-solid fa-user-plus" style="margin-left: 10px;"></i>
+ 		<a onclick="location.href='${contextPath}/member/signUp.do'">회원가입</a>
  	</div>
  </div>
   <hr>
