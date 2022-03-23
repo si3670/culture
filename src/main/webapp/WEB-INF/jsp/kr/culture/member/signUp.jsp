@@ -4,7 +4,8 @@
 <!--프로젝트 주소(명)-->
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
-<div class="visual">
+
+<div class="visual" style="background-color: #ccc;">
 	<div class="visual-1">
 		<div class="img-box">
 			<img alt="" src="${contextPath}/images/visual/sub_visual02.jpg">
@@ -13,8 +14,11 @@
 			<img alt="" src="${contextPath}/images/visual/title.png">
 		</div>
 	</div>
-	
-	<div class="visual-2">
+</div>
+
+<!-- <div style="height: 300px;"></div> -->
+
+<div class="signUp-con">
 		<form id="signUpForm" name="signUpForm" class="signUpForm center">
 	        <div class="signUpForm-1">
 	            <h1 class="form-title">회원가입</h1>
@@ -58,6 +62,3 @@
               	</div>
    		</form>
 	</div>
-</div>
-
-
