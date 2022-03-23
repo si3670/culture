@@ -4,61 +4,68 @@
 <!--프로젝트 주소(명)-->
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
+<script type="text/javascript">
+	//회원가입
+	function signUpForm() {
+		//(1) 유효성 검사 
+		//빈칸 입력 시 "00을 입력해주세요" alert
+		//빈칸 입력시 alert창 나오고 input에 focus 주기
+		
+		//(2) 해당 controller로 전송
+		//$.ajax
+	}
+	
+	$(document).ready(function () {
+		//회원가입 버튼 클릭 시 signUpForm() 이벤트
+		$("#signUpFormBtn").on('click', function () {
+			signUpForm();
+		});
+})
+</script>
 
-<div class="visual" style="background-color: #ccc;">
-	<div class="visual-1">
-		<div class="img-box">
-			<img alt="" src="${contextPath}/images/visual/sub_visual02.jpg">
+
+<div class="context">
+	<form id="signUpForm" name="signUpForm" class="signUpForm center">
+      <div class="form-1">
+          <h1 class="form-title">회원가입</h1>
+          
+          <ul class="form-ul">
+          	<li>
+          		<label>아이디</label>
+         			<div>
+          		 	<input type="text" id="userId" name="userId">
+          		</div>
+          	</li>
+          	<li>
+         		<label>비밀번호</label>
+         		<div>
+          		 	<input type="password" id="userPw" name="userPw">
+          		</div>
+          	</li>
+          	<li>
+         		<label>비밀번호 확인</label>
+         		<div>
+          			 <input type="text" id="userPwComfirm" name="userPwComfirm">
+          		</div>
+          	</li>
+          	<li>
+        		<label>이름</label>
+        		<div>
+          			<input type="text" id="name" name="name">
+          		</div>
+          	</li>
+          	<li>
+         		<label>Email</label>
+         		<div>
+          			<input type="text" id="email" name="email">
+          		</div>
+          	</li>
+          </ul>
+          
+		  <div class="button">
+			<a id="signUpFormBtn" class="btn">가입하기</a>
+			<a onclick="" class="btn">취소</a>
+		  </div>
 		</div>
-		<div class="img-box visual-title">
-			<img alt="" src="${contextPath}/images/visual/title.png">
-		</div>
-	</div>
+	</form>
 </div>
-
-<!-- <div style="height: 300px;"></div> -->
-
-<div class="signUp-con">
-		<form id="signUpForm" name="signUpForm" class="signUpForm center">
-	        <div class="signUpForm-1">
-	            <h1 class="form-title">회원가입</h1>
-	            
-	            <ul class="signUp-ul">
-	            	<li>
-	            		<label>아이디</label>
-            			<div>
-	            		 	<input type="text" id="userId" name="userId">
-	            		</div>
-	            	</li>
-	            	<li>
-            			<label>비밀번호</label>
-            			<div>
-	            		 	<input type="password" id="userPw" name="userPw">
-	            		</div>
-	            	</li>
-	            	<li>
-            			<label>비밀번호 확인</label>
-            			<div>
-	            			 <input type="text" id="userPwComfirm" name="userPwComfirm">
-	            		</div>
-	            	</li>
-	            	<li>
-            			<label>이름</label>
-            			<div>
-	            			<input type="text" id="name" name="name">
-	            		</div>
-	            	</li>
-	            	<li>
-            			<label>Email</label>
-            			<div>
-	            			<input type="text" id="email" name="email">
-	            		</div>
-	            	</li>
-	            </ul>
-                <div>
-	                 <a href="#" class="btn">가입하기</a>
-	                 <a href="#" class="btn">취소</a>
-               	</div>
-              	</div>
-   		</form>
-	</div>

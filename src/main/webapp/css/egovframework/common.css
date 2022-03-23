@@ -17,7 +17,6 @@ body{
 ol, ul, li {
 	list-style: none;
 }
-
 a {
 	text-decoration: none;
 	color: inherit;
@@ -34,6 +33,9 @@ a:hover{
 .img-box>img{
 	display: block;
 	width: 100%;
+}
+input{
+	padding: 3px 0;
 }
 /*css 기초 작업 끝*/
 .con {
@@ -108,7 +110,9 @@ ul>li {
 /*visual 끝*/
 /*메인화면 끝*/
 /*회원가입 시작*/
-
+.context{
+	margin-top: 300px; 	
+}
 .btn {
 	display: inline-block;
 	width: 80px;
@@ -116,18 +120,22 @@ ul>li {
 	background-color: green;
 	color: #fff;
 }
-.signUpForm-1{
+.form-1{
 	display: inline-block;
 	padding: 50px;
 }
-.signUp-ul>li{
+.form-ul>li{
 	display: block;
+	margin-top: 7px;
 }
-.signUp-ul{
+.form-ul{
 	text-align: left;
 }
 .form-title{
 	text-align: center;
 	font-size: 40px;
+}
+.button{
+	margin-top: 10px;	
 }
 /*회원가입 끝*/
