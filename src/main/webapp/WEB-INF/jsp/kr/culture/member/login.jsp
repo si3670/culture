@@ -13,14 +13,39 @@
 		
 		//(2) 해당 controller로 전송
 		//$.ajax
-	}
-	
+	if($('#userId').val()==""){
+			alert("아이디를 입력해주세요!");
+			$('#userId').focus();
+			return;
+		}
+	if($('#userPw').val()==""){
+		alert("비밀번호를 입력해주세요!");
+		$('#userPw').focus();
+		return;
+	}	
+} 
 	$(document).ready(function () {
 		//로그인 버튼 클릭 시 loginForm() 이벤트
 		$("#loginFormBtn").on('click', function () {
 			loginForm();
+			$.ajax({
+				type:"POST",
+				url: "/login.do",
+				data: { "userId": $("#userId").val(), 
+					  "userPw": $("#userPw").val()
+					  },
+						 success: function(data){
+					        alert(data.Msg);
+					   },
+					      error: function(){
+					            alert("err");
+					    }
+				});	
 		});
 	})
+
+			
+
 </script>
  
 <div class="context">
