@@ -2,6 +2,7 @@ package kr.culture.member.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 
@@ -36,6 +37,12 @@ public class MemeberController {
 	@RequestMapping(value="/login.do")
 	public String logIn() throws Exception{
 		return "member/login.tiles";
+	}
+	
+	@RequestMapping(value="/doLogin.do")
+	@ResponseBody
+	public void dologIn(String userId, String userPw) throws Exception{
+		System.out.println("hi");
 	}
 	
 	/**

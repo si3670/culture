@@ -13,6 +13,9 @@
 		
 		//(2) 해당 controller로 전송
 		//$.ajax
+		
+		//파라미터 받을게 2개 이상이면 serialize로 받아오기
+		//var params = $('#signUpForm').serialize();  -------> 파라미터가  "loginId=e&loginPw=e& ..." 이렇게 넘어감
 	}
 	
 	$(document).ready(function () {
