@@ -56,7 +56,7 @@ public class MemeberController {
 	 */
 	@RequestMapping(value="/findInfo.do")
 	public String findInfo() throws Exception{
-		return "member/findInfo";
+		return "member/findInfo.tiles";
 	}
 	
 	/**

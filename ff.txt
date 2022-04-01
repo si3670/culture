@@ -4,4 +4,6 @@
 03/07 클래스 명 첫글자는 대문자로 써주세형
 
 03/25 login.jsp를 손보긴 했는데 ajax가 완벽하지 않네여.. 주말간 다시 공부해서 완성시킬께오:)
+4/1 findInfo.jsp html 부문과 signUp.jsp 기능 만들어봤는데 확인 부탁드려요 그리고
+ jsp부분은 camel case로 적는게 아니라고 하던데.. 어떻게 통일할지 의견 부탁드립니당
 https://www.gyeryong.go.kr/tour/ ---> 계룡 문화관광 사이트
