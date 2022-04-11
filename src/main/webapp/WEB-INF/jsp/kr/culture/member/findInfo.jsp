@@ -42,20 +42,50 @@
 	//(2) 비번찾기 버튼 누를때 발생하는 이벤트임
 	function findPwForm() {
 		//(3) 유효성 검사 
-		
+		if($('#userId').val()==""){
+			alert("ID를 입력해주세요.");
+			$('#userId').focus();
+			return;
+		}
+		if($('#userNm').val()==""){
+			alert("이름을 입력해주세요.");
+			$('#userNm').focus();
+			return;
+		}
+		if($('#userEmail').val()==""){
+			alert("이메일을 입력해주세요.");
+			$('#userEmail').focus();
+			return;
+		}
 		//(4) ajax를 통해 controller로 데이터 전송
 		//컨트롤러 만들어서 데이터 들어오는지 확인해주세여 (디버깅 확인이요)
 		//파라미터 3개 이상이니까 vo로 받아주세여 
 		//회원가입 로직이랑 똑같아
+		var params = $("#findPwForm").serialize();
+		
+		$.ajax({
+			url: '${contextPath}/member/doFindPw.do',
+			type: 'POST',
+			data: params,
+			success: function(data){
+				alert("success");
+			},
+		    error: function(status, error){
+		    	alert("1. error : " + error);
+		    }
+		});
 	}
 
-	$(document).ready(function () {
+	$(document).ready(function() {
 		$("#findIdFormBtn").on('click', function () {
 			findIdForm();
 		});
 		
 		//(1) 비번찾기 버튼을 눌렀을 때 이 이벤트가 발생해라!
-	})
+		$(document).ready(function() {
+		$("#findPwFormBtn").on('click', function () {
+			findPwForm();
+		});
 </script>
 
 
@@ -99,7 +129,7 @@
            	<li>
           		<label>이름</label>
 	        	<div>
-					<input type="text" id="userName" name="userName" placeholder="이름 입력">
+					<input type="text" id="userNm" name="userNm" placeholder="이름 입력">
 				</div>
 			</li>
 			<li>
@@ -110,7 +140,7 @@
 			</li>
            </ul>
 			<div class="button">
-				<a id="" class="btn">비밀번호 찾기</a> 
+				<a id="findPwFormBtn" class="btn">비밀번호 찾기</a> 
 			</div>
 		</div>
 	</form>

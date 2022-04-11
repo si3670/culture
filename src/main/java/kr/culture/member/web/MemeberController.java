@@ -95,7 +95,20 @@ public class MemeberController {
 	public void doFindId(@RequestParam Map<String, String> param) throws Exception{
 		System.out.println("아이디찾기 성공");
 	}
-	
+	/**
+	 * <pre>아이디 찾기</pre>
+	 *
+	 * @author kimgukbin
+	 * @since 2022. 4. 11.
+	 *
+	 * @param param
+	 * @throws Exception
+	 */
+	@RequestMapping(value="/doFindPw.do")
+	@ResponseBody
+	public void doFindPw(@RequestParam MemberVo MembeVo) throws Exception{
+		System.out.println("비밀번호찾기 성공");
+	}
 	/**
 	 *  회원관리 페이지 이동
 	 *  
