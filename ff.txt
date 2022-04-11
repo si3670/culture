@@ -1,9 +1,15 @@
 하나 둘 셋 얍.
 ㅋㅋㅋㅋㅋㅋㅋㅋ어이없어서 짜증나
+https://www.gyeryong.go.kr/tour/ ---> 계룡 문화관광 사이트
 
 03/07 클래스 명 첫글자는 대문자로 써주세형
 
 03/25 login.jsp를 손보긴 했는데 ajax가 완벽하지 않네여.. 주말간 다시 공부해서 완성시킬께오:)
 4/1 findInfo.jsp html 부문과 signUp.jsp 기능 만들어봤는데 확인 부탁드려요 그리고
  jsp부분은 camel case로 적는게 아니라고 하던데.. 어떻게 통일할지 의견 부탁드립니당
-https://www.gyeryong.go.kr/tour/ ---> 계룡 문화관광 사이트
+
+4/11 id, name -> camel case   &   class -> -
+4/11 id, name -> domain에 정확한 명 있으니까 잘 보고 똑같이 넣어야 맵핑이 됩니다
+4/11 파라미터 규칙 ----> 파라미터 1개 일때 String
+               ----> 파라미터 2개 일때 Map
+               ----> 파라미터 3개 이상일때 Vo

@@ -10,6 +10,7 @@
 	<title>culture</title>
 	
 	<tiles:insertAttribute name="header" />
+	<tiles:insertAttribute name="visual" />
 	<tiles:insertAttribute name="content"/>
 	<tiles:insertAttribute name="footer"/>
 

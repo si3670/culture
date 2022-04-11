@@ -47,7 +47,8 @@
 		});
 	})
 </script>
- 
+
+
 <div class="context">
 	<form id="loginForm" name="loginForm" class="loginForm center">
        <div class="form-1">
@@ -69,7 +70,7 @@
             </ul>
 			<div class="button">
 				<a id="loginFormBtn" class="btn">로그인</a> 
-				<a onclick="" class="btn">취소</a>
+				<a onclick="location.href='${contextPath}/member/findInfo.do'" class="btn">id/pw 찾기</a>
 			</div>
 		</div>
  	</form>

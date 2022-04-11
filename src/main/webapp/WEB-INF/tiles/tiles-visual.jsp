@@ -4,8 +4,6 @@
 <!--프로젝트 주소(명)-->
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
-
-
  <div class="visual">
  	<div class="visual-1">
 	 	<div class="img-box">

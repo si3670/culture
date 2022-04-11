@@ -30,6 +30,9 @@ a:hover{
 .center {
 	text-align: center;
 }
+.left {
+	text-align: left;
+}
 .img-box>img{
 	display: block;
 	width: 100%;
@@ -115,10 +118,10 @@ ul>li {
 }
 .btn {
 	display: inline-block;
-	width: 80px;
 	text-align: center;
 	background-color: green;
 	color: #fff;
+	padding: 3px 5px;
 }
 .form-1{
 	display: inline-block;
@@ -132,10 +135,21 @@ ul>li {
 	text-align: left;
 }
 .form-title{
-	text-align: center;
-	font-size: 40px;
+	font-size: 30px;
 }
 .button{
 	margin-top: 10px;	
 }
 /*회원가입 끝*/
+/*아이디,비번 찾기 시작*/
+.form-find{
+	margin: 0 auto;
+    max-width: 600px;
+}
+.find_name{
+	margin-top: 20px;
+}
+.findPwForm{
+	margin-top: 50px;
+}
+/*아이디,비번 찾기 끝*/

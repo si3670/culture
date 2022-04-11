@@ -11,11 +11,6 @@
 		//빈칸 입력 시 "00을 입력해주세요" alert
 		//빈칸 입력시 alert창 나오고 input에 focus 주기
 		
-		//(2) 해당 controller로 전송
-		//$.ajax
-		
-		//파라미터 받을게 2개 이상이면 serialize로 받아오기
-		//var params = $('#signUpForm').serialize();  -------> 파라미터가  "loginId=e&loginPw=e& ..." 이렇게 넘어감
 		if($('#userId').val()==""){
 			alert("아이디를 입력해주세요.");
 			$('#userId').focus();
@@ -41,13 +36,19 @@
 			$('#email').focus();
 			return;
 		}
+			
+		//(2) 해당 controller로 전송
+		//$.ajax
 		
-		var Params = $("#signUpForm").serialize();
+		//파라미터 받을게 2개 이상이면 serialize로 받아오기
+		//var params = $('#signUpForm').serialize();  -------> 파라미터가  "loginId=e&loginPw=e& ..." 이렇게 넘어감
+		
+		var params = $("#signUpForm").serialize();
 
 		$.ajax({
-			url: '${contextPath}/member/signUp.do',
+			url: '${contextPath}/member/doSignUp.do',
 			type: 'POST',
-			data: $('#signUpForm').serialize(),
+			data: params,
 			success: function(data){
 				alert("success");
 			},
@@ -55,9 +56,8 @@
 		    	alert("1. error : " + error);
 		    }
 		});
-
 	}
-	
+
 	$(document).ready(function () {
 		//회원가입 버튼 클릭 시 signUpForm() 이벤트
 		$("#signUpFormBtn").on('click', function () {
@@ -65,7 +65,6 @@
 		});
 })
 </script>
-
 
 <div class="context">
 	<form id="signUpForm" name="signUpForm" class="signUpForm center">
@@ -94,13 +93,19 @@
           	<li>
         		<label>이름</label>
         		<div>
-          			<input type="text" id="name" name="name">
+          			<input type="text" id="userNm" name="userNm">
+          		</div>
+          	</li>
+          	<li>
+        		<label>전화번호</label>
+        		<div>
+          			<input type="text" id="userPhoneNum" name="userPhoneNum" placeholder="휴대폰번호를 '-'없이 입력">
           		</div>
           	</li>
           	<li>
          		<label>Email</label>
          		<div>
-          			<input type="text" id="email" name="email">
+          			<input type="text" id="userEmail" name="userEmail">
           		</div>
           	</li>
           </ul>

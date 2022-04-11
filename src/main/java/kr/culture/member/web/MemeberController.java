@@ -1,8 +1,13 @@
 package kr.culture.member.web;
 
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import kr.culture.member.domain.MemberVo;
 
 /**
  * 
@@ -25,6 +30,13 @@ public class MemeberController {
 		public String signUp() throws Exception{
 			return "member/signUp.tiles";
 		}
+	
+	@RequestMapping(value="/doSignUp.do")
+	@ResponseBody
+	public void doSignUp(MemberVo memberVo) throws Exception{
+		System.out.println("회원가입 확인");
+	}
+	
 	/**
 	 *  로그인 화면 이동
 	 *  
@@ -39,9 +51,19 @@ public class MemeberController {
 		return "member/login.tiles";
 	}
 	
+	/**
+	 * <pre>로그인</pre>
+	 *
+	 * @author leesein
+	 * @since 2022. 4. 11.
+	 *
+	 * @param userId
+	 * @param userPw
+	 * @throws Exception
+	 */
 	@RequestMapping(value="/doLogin.do")
 	@ResponseBody
-	public void dologIn(String userId, String userPw) throws Exception{
+	public void doLogIn(@RequestParam Map<String, Object> param) throws Exception{
 		System.out.println("hi");
 	}
 	
@@ -57,6 +79,21 @@ public class MemeberController {
 	@RequestMapping(value="/findInfo.do")
 	public String findInfo() throws Exception{
 		return "member/findInfo.tiles";
+	}
+	
+	/**
+	 * <pre>아이디 찾기</pre>
+	 *
+	 * @author leesein
+	 * @since 2022. 4. 11.
+	 *
+	 * @param param
+	 * @throws Exception
+	 */
+	@RequestMapping(value="/doFindId.do")
+	@ResponseBody
+	public void doFindId(@RequestParam Map<String, Object> param) throws Exception{
+		System.out.println("아이디찾기 성공");
 	}
 	
 	/**
