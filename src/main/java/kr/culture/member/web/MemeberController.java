@@ -63,7 +63,7 @@ public class MemeberController {
 	 */
 	@RequestMapping(value="/doLogin.do")
 	@ResponseBody
-	public void doLogIn(@RequestParam Map<String, Object> param) throws Exception{
+	public void doLogIn(@RequestParam Map<String, String> param) throws Exception{
 		System.out.println("hi");
 	}
 	
@@ -92,7 +92,7 @@ public class MemeberController {
 	 */
 	@RequestMapping(value="/doFindId.do")
 	@ResponseBody
-	public void doFindId(@RequestParam Map<String, Object> param) throws Exception{
+	public void doFindId(@RequestParam Map<String, String> param) throws Exception{
 		System.out.println("아이디찾기 성공");
 	}
 	
