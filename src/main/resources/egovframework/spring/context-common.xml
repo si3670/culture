@@ -8,7 +8,7 @@
 
 	<context:annotation-config />
 	<mvc:annotation-driven />
-    <context:component-scan base-package="kr.culture.member.web">
+    <context:component-scan base-package="kr.culture">
        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
 

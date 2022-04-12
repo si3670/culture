@@ -47,11 +47,11 @@
 			$('#userId').focus();
 			return;
 		}
-		if($('#userNm').val()==""){
+		/* if($('#userNm').val()==""){
 			alert("이름을 입력해주세요.");
 			$('#userNm').focus();
 			return;
-		}
+		} */
 		if($('#userEmail').val()==""){
 			alert("이메일을 입력해주세요.");
 			$('#userEmail').focus();
@@ -82,10 +82,10 @@
 		});
 		
 		//(1) 비번찾기 버튼을 눌렀을 때 이 이벤트가 발생해라!
-		$(document).ready(function() {
-		$("#findPwFormBtn").on('click', function () {
+		$("#findPwFormBtn").on('click', function() {
 			findPwForm();
 		});
+	});
 </script>
 
 

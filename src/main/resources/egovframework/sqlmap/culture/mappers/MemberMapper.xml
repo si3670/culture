@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.culture.member.mapper.MemberMapper">
+
+	<!--회원가입-->
+	<insert id="insertMember" parameterType="memberVo">
+		INSERT INTO MEMBER (
+			 USERID, 
+			 USERPW, 
+			 USERNM, 
+			 USERPHONENUM, 
+			 USEREMAIL, 
+			 CREATEDATE, 
+			 UPDATEDATE
+		)
+		VALUES (
+			 #{userId}
+			,#{userPw}
+			,#{userNm}
+			,#{userPhoneNum}
+			,#{userEmail}
+			,TO_CHAR(SYSDATE, 'YYYY-MM-DD')
+			,TO_CHAR(SYSDATE, 'YYYY-MM-DD')
+		)
+	</insert>
+
+
+</mapper>

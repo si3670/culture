@@ -50,7 +50,9 @@
 			type: 'POST',
 			data: params,
 			success: function(data){
-				alert("success");
+				alert("환영합니다");
+				$('#signUpForm').submit();
+				location.href = '${contextPath}/member/login.do';
 			},
 		    error: function(status, error){
 		    	alert("1. error : " + error);

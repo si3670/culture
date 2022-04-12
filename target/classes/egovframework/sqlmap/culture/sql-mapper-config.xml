@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>  
+		<setting name="cacheEnabled"				value="true"/>
+		<setting name="lazyLoadingEnabled"			value="false"/>
+		<setting name="multipleResultSetsEnabled"	value="true"/>
+		<setting name="useColumnLabel"				value="true"/>
+		<setting name="useGeneratedKeys"			value="false"/>
+		<setting name="defaultExecutorType"			value="SIMPLE"/>
+		<setting name="defaultStatementTimeout"		value="25000"/>
+		<setting name="jdbcTypeForNull"				value="VARCHAR" /><!--null값 허용-->
+		<setting name="callSettersOnNulls"			value="true" />
+		<setting name="mapUnderscoreToCamelCase"	value="true"/><!-- 카멜케이스변수 설정(언더스코어[언더바] 형식의 테이블 컬럼과 vo의 변수 매핑 ex:ESTM_NM -> estmNm) 기본값 : false -->
+		<setting name="defaultFetchSize" 			value="500"/>
+	</settings>
+	
+	<!-- shLee: 패키지로 묶었으므로  domain 객체는 @Alias 어노테이션으로 관리하라. 만약 domain 모델의 타입이 중복 될 우려가 있을경우 타입을 각각 관리하도록 한다. -->
+    <typeAliases>
+		<package name="kr.culture"/>
+    </typeAliases>
+</configuration>

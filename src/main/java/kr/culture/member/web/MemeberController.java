@@ -2,12 +2,14 @@ package kr.culture.member.web;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.culture.member.domain.MemberVo;
+import kr.culture.member.service.MemberService;
 
 /**
  * 
@@ -17,6 +19,10 @@ import kr.culture.member.domain.MemberVo;
 @Controller
 @RequestMapping("/member")
 public class MemeberController {
+	
+	@Autowired
+	private MemberService memberService;
+	
 	/**
 	 *  회원가입 화면
 	 *  
@@ -31,9 +37,19 @@ public class MemeberController {
 			return "member/signUp.tiles";
 		}
 	
+	/**
+	 * <pre>회원가입</pre>
+	 *
+	 * @author leesein
+	 * @since 2022. 4. 12.
+	 *
+	 * @param memberVo
+	 * @throws Exception
+	 */
 	@RequestMapping(value="/doSignUp.do")
 	@ResponseBody
 	public void doSignUp(MemberVo memberVo) throws Exception{
+		this.memberService.insertMember(memberVo);
 		System.out.println("회원가입 확인");
 	}
 	
@@ -64,7 +80,7 @@ public class MemeberController {
 	@RequestMapping(value="/doLogin.do")
 	@ResponseBody
 	public void doLogIn(@RequestParam Map<String, String> param) throws Exception{
-		System.out.println("hi");
+		System.out.println("로그인 완료");
 	}
 	
 	/**
@@ -95,18 +111,19 @@ public class MemeberController {
 	public void doFindId(@RequestParam Map<String, String> param) throws Exception{
 		System.out.println("아이디찾기 성공");
 	}
+
 	/**
-	 * <pre>아이디 찾기</pre>
+	 * <pre>비번 찾기</pre>
 	 *
-	 * @author kimgukbin
-	 * @since 2022. 4. 11.
+	 * @author leesein
+	 * @since 2022. 4. 12.
 	 *
-	 * @param param
+	 * @param MembeVo
 	 * @throws Exception
 	 */
 	@RequestMapping(value="/doFindPw.do")
 	@ResponseBody
-	public void doFindPw(@RequestParam MemberVo MembeVo) throws Exception{
+	public void doFindPw(MemberVo MembeVo) throws Exception{
 		System.out.println("비밀번호찾기 성공");
 	}
 	/**
